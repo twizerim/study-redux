@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Game of Thrones Houses</h1>
+      <h1 className="text-2xl font-bold mb-5">Game of Thrones Houses</h1>
       <input
         type="text"
         placeholder="Search for a house..."
