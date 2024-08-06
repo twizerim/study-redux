@@ -18,11 +18,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useGetHousesQuery } from '@/game/api/apiSlice'; 
 import { useGetHouseDetailsQuery } from '@/game/api/apiSlice';
+import { useGetHousesQuery } from '@/game/api/apiSlice'; 
 
 const Home = () => {
-  // Fetch all houses
   const { data: houses, error, isLoading } = useGetHousesQuery(); 
   const [search, setSearch] = useState('');
 
@@ -35,7 +34,7 @@ const Home = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-5">Game of Thrones Houses</h1>
+      <h1 className="text-2xl font-bold mb-4">Game of Thrones Houses</h1>
       <input
         type="text"
         placeholder="Search for a house..."
@@ -49,7 +48,7 @@ const Home = () => {
             <h2 className="text-xl font-semibold">{house.name}</h2>
             <p><strong>Region:</strong> {house.region}</p>
             <p><strong>Coat of Arms:</strong> {house.coatOfArms}</p>
-            <Link href={`/houses/${house.url.split('/').pop()}`} legacyBehavior>
+            <Link href={`/houses/${house.url.split('/').pop()}`}>
               <a className="text-blue-500">View Details</a>
             </Link>
           </div>
