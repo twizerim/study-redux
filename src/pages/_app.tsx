@@ -1,13 +1,16 @@
-import { Store } from "@/lib/store";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
-import { store } from '../game/store/store';
+import { store } from "../game/store/store";
+import { ConfigProvider } from "antd";
+import theme from '../components/util/themeConfig';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <Component {...pageProps} />
+      <ConfigProvider theme={theme}>
+        <Component {...pageProps} />
+      </ConfigProvider>
     </Provider>
   );
 }

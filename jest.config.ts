@@ -14,6 +14,9 @@ const config: Config = {
     "**/__tests__/**/*.[jt]s?(x)", // Match any .js, .jsx, .ts, .tsx files in __tests__ folders
     "**/?(*.)+(spec|test).[tj]s?(x)", // Match any .js, .jsx, .ts, .tsx files ending with .spec or .test
   ],
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
+  },
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
