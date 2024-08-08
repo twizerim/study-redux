@@ -41,8 +41,7 @@ const Home = () => {
         />
         <div className="flex justify-center gap-[20px] items-center">
           <p onClick={Handlegame}>Games</p>
-          <p onClick={Handlenews}>News</p>
-          <button>Login</button>
+          <p onClick={Handlenews}>Blog</p>
         </div>
       </main>
       {news && <NewsContent />}
