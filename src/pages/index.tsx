@@ -40,7 +40,7 @@ const Home = () => {
           className="p-2 border rounded mb-4 w-[700px]"
         />
         <div className='flex justify-center gap-[20px] items-center'>
-          <p onClick={Handlegame}>Notification</p>
+          <p onClick={Handlegame}>Games</p>
           <p onClick={Handlenews}>News</p>
           <button>Login</button>
         </div>
