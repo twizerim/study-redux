@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useGetHousesQuery } from "@/game/api/apiSlice";
+import { useGetHousesQuery } from "../components/redux/game/api/apiSlice";
 import Notfound from "./[404]";
 import NewsContent from "@/components/newscontent";
 import { Card } from "antd";

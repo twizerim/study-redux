@@ -1,4 +1,4 @@
-import { useGetHouseDetailsQuery } from "@/game/api/apiSlice";
+import { useGetHouseDetailsQuery } from "../../components/redux/game/api/apiSlice";
 import { useRouter } from "next/router";
 import Link from "next/link";
 

@@ -1,5 +1,5 @@
-import { addToCart } from "@/slices/cart";
-import { removeFrimCart } from "@/slices/cart";
+import { addToCart } from "../../redux/slices/cart";
+import { removeFromCart } from "../../redux/slices/cart";
 import { useDispatch } from "react-redux";
 export default function Header() {
   const distpatch = useDispatch();
@@ -8,7 +8,7 @@ export default function Header() {
     distpatch(addToCart());
   };
   const HandleclickRemove = () => {
-    distpatch(removeFrimCart());
+    distpatch(removeFromCart());
   };
   return (
     <div className="w-full h-[300px] bg-red-300 flex justify-center items-center gap-[20px]">
