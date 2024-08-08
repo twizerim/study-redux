@@ -2,10 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface InitialStateInterface {
   products: number;
+  day: string; 
 }
+
 const initialState: InitialStateInterface = {
   products: 0,
+  day: new Date().toLocaleDateString(),
 };
+
 export const Cart = createSlice({
   name: "cart",
   initialState,
@@ -13,12 +17,14 @@ export const Cart = createSlice({
     addToCart: (state) => {
       state.products += 1;
     },
-    removeFrimCart: (state) => {
+    removeFromCart: (state) => {
       state.products -= 1;
+    },
+    displayDateOfDay: (state) => {
+      state.day = new Date().toLocaleDateString();
     },
   },
 });
-
-export const { addToCart, removeFrimCart } = Cart.actions;
+export const { addToCart, removeFromCart, displayDateOfDay } = Cart.actions;
 
 export default Cart.reducer;

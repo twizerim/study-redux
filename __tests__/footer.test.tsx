@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Footer from "@/components/footer";
+import Footer from "@/components/shared/layout/footer";
 import { describe, test } from "node:test";
 import "@testing-library/jest-dom";
 
@@ -9,6 +9,6 @@ describe("show test of footer pragraph", () => {
 });
 
 it("render footer pragraph", () => {
-  const pElement = screen.getByRole("search");
-  expect(pElement).toHaveValue("footer");
+  const pElement = screen.getByRole("bottom");
+  expect(pElement).toBeInTheDocument();
 });

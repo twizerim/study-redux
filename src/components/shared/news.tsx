@@ -18,10 +18,8 @@ const News: React.FC<NewsProp> = ({ title, description, date, link }) => {
       <p role="description" className="py-[10px]">
         {description}
       </p>
-      <Link href={link} legacyBehavior>
-        <a role="link" className="text-red-400">
-          Continue to <a className="text-blue-600">dev.to</a>{" "}
-        </a>
+      <Link href={link} role="link" className="text-blue-600" >
+          Continue to dev.to
       </Link>
     </div>
   );

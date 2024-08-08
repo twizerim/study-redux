@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cart from "@/slices/cart";
+import cart from "../slices/cart";
 import { api } from "./api";
 
 export const Store = configureStore({
