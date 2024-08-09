@@ -5,6 +5,7 @@ import { useGetHousesQuery } from "../components/redux/game/api/apiSlice";
 import Notfound from "./[404]";
 import NewsContent from "@/components/newscontent";
 import { Card } from "antd";
+import Footer from "@/components/shared/layout/footer";
 
 const Home = () => {
   const { data: houses, error, isLoading } = useGetHousesQuery();
@@ -41,8 +42,7 @@ const Home = () => {
         />
         <div className="flex justify-center gap-[20px] items-center">
           <p onClick={Handlegame}>Games</p>
-          <p onClick={Handlenews}>News</p>
-          <button>Login</button>
+          <p onClick={Handlenews}>Blog</p>
         </div>
       </main>
       {news && <NewsContent />}
@@ -86,6 +86,7 @@ const Home = () => {
           )}
         </div>
       )}
+     <Footer/>
     </>
   );
 };
