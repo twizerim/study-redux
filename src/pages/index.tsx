@@ -5,6 +5,7 @@ import { useGetHousesQuery } from "../components/redux/game/api/apiSlice";
 import Notfound from "./[404]";
 import NewsContent from "@/components/newscontent";
 import { Card } from "antd";
+import Footer from "@/components/shared/layout/footer";
 
 const Home = () => {
   const { data: houses, error, isLoading } = useGetHousesQuery();
@@ -85,6 +86,7 @@ const Home = () => {
           )}
         </div>
       )}
+     <Footer/>
     </>
   );
 };
